@@ -1,0 +1,26 @@
+Para clonar o que existe no git, primeiro no git bash esteja no diretório onde quer salvar o projeto, depois digite:
+
+git clone 'https://github.com/HeitorVieira/filmeshd.git'
+
+isto baixará o projeto, creio que depois precisa digitar coisas para poder rodar, tipo bundle instal e rake db:migrate.
+
+para realizar mudanças no repositório central deve-se realizar a seguinte sequencia de comandos
+
+1) git add .
+
+este comando serve para atualizar seu arquivo local com as mudanças
+
+2) git commit -am 'alguma mensagem do pq dessa atualização'
+
+você consolida as mudanças em um arquivo local do git, se fizer push logo após isso pode dar problema com o que estava no repositório da remoto central, por isso o próximo passo é git pull para primeiro pegar as atualizações feitas no repositório remoto e daí corrigir os conflitos que surgiram para só depois dar git push
+
+3) git pull
+
+pega as atualizações no repositório central e tenta fazer um merge com o seu local, se der algum conflito resolva-o e depois refazer os passos 1, 2 e 3.
+
+4) teste a aplicação
+verifique se tudo está certo
+
+5) git push
+apenas quando estiver seguro que está tudo certo.
+manda o projeto para o repositório central remoto.
